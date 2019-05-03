@@ -1,7 +1,7 @@
 const express=require('express');
 const app=express();
 const morgan=require('morgan');
-
+const {mongoose}=require('./database');
 //Settings
 app.set('port',process.env.PORT || 3000);
 //Middlewares
