@@ -8,5 +8,5 @@ app.set('port',process.env.PORT || 3000);
 
 //Arranque de servidor
 app.listen(app.get('port'), ()=>{
-    console.log('Servidor en puerto 3000');
+    console.log('Servidor en puerto '+app.get('port'));
 });
