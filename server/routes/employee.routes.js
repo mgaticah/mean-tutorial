@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-router.get('/',(req,res)=>{
-    res.json({message:'hello world'});
-});
+const employeeCtrl=require('../controllers/employee.controller');
+
+router.get('/',employeeCtrl.getEmployees);
 module.exports=router;
