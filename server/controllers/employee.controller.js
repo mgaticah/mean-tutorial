@@ -17,13 +17,13 @@ employeeController.getEmployee=async (req,res)=>{
 employeeController.editEmployee= async (req,res)=>{
     const {id}=req.params.id;
     const employee={
-        name:req.params.name,
-        position:req.params.position,
-        salary:req.params.salary,
-        office:req.params.office
+        name:req.body.name,
+        position:req.body.position,
+        salary:req.body.salary,
+        office:req.body.office
     };
-    await Employee.findByIdAndUpdate(id, {$set:employee},{new:true});
-    res.json({"status":"edit ok"});
+    await Employee.findOneAndUpdate({ _id: id }, employee, { overwrite: true, new:true });
+    
 };
 employeeController.deleteEmployee=()=>{};
 
