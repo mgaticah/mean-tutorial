@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const uri='mongodb://mongoadm:Atari6502@localhost:27017/employeesDb'
+const uri='mongodb://localhost:27017/employeesDb'
 mongoose.connect(uri, { useNewUrlParser: true }).then(
     db=>{
         console.log('Base de datos conectada');
