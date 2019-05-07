@@ -5,8 +5,16 @@ employeeController.getEmployees = async (req, res) => {
     res.json(employees);
  };
 
-employeeController.createEmployee=()=>{};
-employeeController.getEmployee=()=>{};
+employeeController.createEmployee= async(req, res)=>{
+   const employee= new Employee(req.body);
+   console.log(employee);
+   employee.save();
+   res.json({"status":"OK"});
+};
+employeeController.getEmployee=async (req,res)=>{
+    const employee= await Employee.findById(req.params.id);
+    res.json(employee);
+};
 employeeController.editEmployee=()=>{};
 employeeController.deleteEmployee=()=>{};
 
