@@ -22,7 +22,8 @@ employeeController.editEmployee= async (req,res)=>{
         salary:req.body.salary,
         office:req.body.office
     };
-    await Employee.findOneAndUpdate({ _id: id }, employee, { overwrite: true, new:true });
+    await Employee.findOneAndUpdate(id, employee, { overwrite: true, new:true });
+    res.json(employee);
     
 };
 employeeController.deleteEmployee=()=>{};
