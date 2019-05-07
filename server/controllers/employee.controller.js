@@ -1,7 +1,9 @@
+const Employee=require('../models/employee');
 const employeeController = {};
-employeeController.getEmployees = (req, res) => {
-    res.json({ message: 'employees goes here' });
-};
+employeeController.getEmployees = async (req, res) => {
+    const employees= await Employee.find();
+    res.json(employees);
+ };
 
 employeeController.createEmployee=()=>{};
 employeeController.getEmployee=()=>{};
