@@ -13,19 +13,19 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="position" #name="ngModel"
+                <input type="text" name="position" #position="ngModel"
                   [(ngModel)]="EmployeeService.selectedEmployee.position" placeholder="Ingrese Posición" />
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="office" #name="ngModel" [(ngModel)]="EmployeeService.selectedEmployee.office"
+                <input type="text" name="office" #office="ngModel" [(ngModel)]="EmployeeService.selectedEmployee.office"
                   placeholder="Ingrese oficina" />
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" name="salary" #name="ngModel" [(ngModel)]="EmployeeService.selectedEmployee.salary"
+                <input type="text" name="salary" #name="salary" [(ngModel)]="EmployeeService.selectedEmployee.salary"
                   placeholder="Ingrese salario" />
               </div>
             </div>
