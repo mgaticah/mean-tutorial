@@ -35,6 +35,23 @@
       </div>
 
     </div>
-    <div class="col s6"></div>
+    <div class="col s6">
+      <table>
+        <thead>
+          <td>Nombre</td>
+          <td>Cargo</td>
+          <td>Oficina</td>
+          <td>Salario</td>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeService.employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.position}}</td>
+            <td>{{employee.office}}</td>
+            <td>{{employee.salary}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

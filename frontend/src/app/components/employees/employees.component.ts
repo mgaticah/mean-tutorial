@@ -28,6 +28,7 @@ export class EmployeesComponent implements OnInit {
     this.employeeService.postEmployees(form.value).subscribe(result => {
       this.resetForm(form);
       M.toast({ html: 'Empleado grabado' });
+      this.getEmployees();
     });
   }
   getEmployees() {
