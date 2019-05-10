@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../../services/employee.service';
 import { NgForm } from '@angular/forms';
 import { Employee } from 'src/app/models/employee';
-
+declare var M:any;
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
@@ -27,6 +27,7 @@ export class EmployeesComponent implements OnInit {
   {
     this.employeeService.postEmployees(form.value).subscribe(result=>{
       this.resetForm(form);
+      M.toast({html:'Empleado grabado'});
     });
   }
 }
