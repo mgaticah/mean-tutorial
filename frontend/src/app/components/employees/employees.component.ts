@@ -26,7 +26,7 @@ export class EmployeesComponent implements OnInit {
   addEmployee(form:NgForm)
   {
     this.employeeService.postEmployees(form.value).subscribe(result=>{
-      console.log(result);
+      this.resetForm(form);
     });
   }
 }
